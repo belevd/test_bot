@@ -22,3 +22,480 @@ telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(t
 telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x03B6EF70>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
 telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x03B82050>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
 telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x03B820F0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x048B4270>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x048B4350>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x048B43F0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x04AE4290>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x04AE4350>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x04AE43F0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getMe
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 22, in greet_user
+    update.message.reply_text(text)
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 22, in greet_user
+    update.message.reply_text(text)
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 22, in greet_user
+    update.message.reply_text(text)
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 25, in talk_to_me
+    user_text = update.message.reply_text
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 25, in talk_to_me
+    user_text = update.message.reply_text
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 25, in talk_to_me
+    user_text = update.message.text
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 25, in talk_to_me
+    user_text = update.message.text
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 22, in greet_user
+    update.message.reply_text(text)
+AttributeError: 'CallbackContext' object has no attribute 'message'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+root - INFO - User: belevd, Chat id: 391257505, Message: Приветики
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 25, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet[1], ephem.constellation(planet[1])))
+ValueError: the sequence specifying a position must have exactly two coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 25, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet[1], ephem.constellation(ephem.planet[1])))
+AttributeError: module 'ephem' has no attribute 'planet'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 27, in planet_info
+    planet = command_text[1](time.strftime('%Y/%m/%d'))
+TypeError: 'str' object is not callable
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 28, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet, ephem.constellation(planet)))
+NameError: name 'ephem' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 27, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet, ephem.constellation(planet)))
+ValueError: the sequence specifying a position must have exactly two coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 28, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet, constellation(planet)))
+ValueError: the sequence specifying a position must have exactly two coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 27, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet, ephem.constellation(planet)))
+ValueError: the sequence specifying a position must have exactly two coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 27, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(planet, ephem.constellation(planet)))
+ValueError: the sequence specifying a position must have exactly two coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 26, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(command_text[1], ephem.constellation(planet)))
+TypeError: you must specify a position by providing either a body or a sequence of two numeric coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "bot.py", line 27, in planet_info
+    update.message.reply_text('{} находится сейчас в созвездии {}'. format(command_text[1], ephem.constellation(planet)))
+TypeError: you must specify a position by providing either a body or a sequence of two numeric coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008090>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x040084B0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008750>: Failed to establish a new connection: [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x040087D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 617, in urlopen
+    chunked=chunked)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x040087D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 218, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 666, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x040087D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 332, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 293, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 66, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 1983, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 327, in post
+    **urlopen_kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x040087D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008050>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008DF0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008E90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008F30>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 617, in urlopen
+    chunked=chunked)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008F30>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 218, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 666, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008F30>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 332, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 293, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 66, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 1983, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 327, in post
+    **urlopen_kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008F30>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x040084F0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00DB7050>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x03DA3990>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008430>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 617, in urlopen
+    chunked=chunked)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008430>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 218, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 666, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008430>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 332, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 293, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 66, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 1983, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 327, in post
+    **urlopen_kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008430>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008E50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008690>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04008450>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates
+telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00DB7030>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 617, in urlopen
+    chunked=chunked)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00DB7030>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 218, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 695, in urlopen
+    **response_kw)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 666, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00DB7030>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 332, in _network_loop_retry
+    if not action_cb():
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\ext\updater.py", line 293, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 66, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\bot.py", line 1983, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 327, in post
+    **urlopen_kwargs)
+  File "C:\Users\Евгений\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot893005100:AAE-jeed2SLHp75uud6oPJZZWv4Yt7M8m-Y/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x00DB7030>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
