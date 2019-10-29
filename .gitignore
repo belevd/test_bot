@@ -1,4 +1,6 @@
 .log
 settings.py
 __*
-env
+env/*
+img/*
+.vscode/*
