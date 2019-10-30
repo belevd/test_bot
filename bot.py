@@ -78,54 +78,62 @@ def wordcount(update, context):
 
 # Start game "citites" (work in progress)
 # Начинает игру "Города" (в процессе)
-city_game = {}
 def cities_game(update, context):
-    user_id = str(update.message.chat.id)
-    city_game[user_id] = cities.cities_of_Russia
-    # check_letter = update.message.text.split()[-1][0]
-    command_text = update.message.text.split()
-    user_text = command_text[-1]
-    if user_text.capitalize == 'Выход':
-        pass
-    elif user_text in city_game[user_id]:
-        resq_letter = user_text[-1].upper()
-        for i in range(len(city_game[user_id])):
-            if city_game[user_id][i][0] == resq_letter:
-                answer = i
-            break
-        update.message.reply_text(city_game[user_id][answer])
-        # check_letter = answer[-1].upper
-        city_game[user_id].remove(user_text)
-        city_game[user_id].remove(city_game[user_id][answer])
+    city_list = get_cities_game(update, context)
+    user_text = update.message.text.strip().split()[-1]
+    check_letter = get_check_letter(update, context)
+    if check_letter == update.message.text.strip().split()[-1][0]:
+        if user_text in city_list:
+            ln = (-1) * len(user_text) - 1  # Начинаем проверку, есть ли в списке города, которые начинаются на нужную букву
+            check = False                   # Если их нет, то меняем букву на предпоследнюю и т.д.
+            for i in range(-1, ln, -1):
+                for a in range(len(city_list)):
+                    if city_list[a][0] == user_text[i].upper() and a != city_list.index(user_text):
+                        rq_letter = i
+                        check = True
+                        break
+                if check:
+                    break
+            resq_letter = user_text[rq_letter].upper()
+            for i in range(len(city_list)):
+                if city_list[i][0] == resq_letter:
+                    answer = i
+                    break
+            ln = (-1) * len(city_list[answer]) - 1  # Начинаем проверку, остались ли в списке города, которые подойдут для ответа пользователя
+            check = False                           # Если их нет, то меняем букву на предпоследнюю и т.д.
+            for i in range(-1, ln, -1):
+                for a in range(len(city_list)):
+                    if city_list[a][0] == city_list[answer][i].upper() and a != answer:
+                        asw_letter = i
+                        check = True
+                        break
+                if check:
+                    break
+            update.message.reply_text(city_list[answer] + ', тебе на "' + city_list[answer][asw_letter].upper() + '"')
+            context.user_data['check_letter'] = city_list[answer][asw_letter].upper()
+            city_list.remove(user_text)
+            city_list.remove(city_list[answer])
+        else:
+            update.message.reply_text('Такого города не существует или он уже был')
     else:
-        print(len(city_game[user_id]))
-        print(user_text)
-        print(city_game[user_id])
-        update.message.reply_text('Такого города не существует или он уже был')
+        update.message.reply_text('Вы написали город, который начинается не на ту букву')
 
-
-    # while True:
-    #     checker = dp.add_handler(MessageHandler(Filters.text, check_city))
-    #     if checker == 'Выход':
-    #         break
-    #     elif checker == 'error':
-    #         update.message.reply_text('Такого города не существует. Повторите попытку')
-
-# Относится к игре "Города"
-def check_city(update, context):
-    command_text = update.message.text.split()
-    user_text = command_text[-1]
-    if user_text.capitalize == 'Выход':
-        return 'Выход'
-    elif user_text in city_game[update.message.chat.id]:
-        resq_letter = user_text[-1].upper()
-        answer = city_game[update.message.chat.id].index('{}*'.format(resq_letter))
-        update.message.reply_text(city_game[update.message.chat.id][answer])
-        check_letter = answer[-1].upper
-        city_game[update.message.chat.id].remove(user_text)
-        city_game[update.message.chat.id].remove(city_game[update.message.chat.id][answer])
+# Проверяет есть ли уже у пользователя список городов для игры в города
+def get_cities_game(update, context):
+    if 'cities_game' in context.user_data:
+        return context.user_data['cities_game']
     else:
-        update.message.reply_text('Такого города не существует. Повторите попытку')
+        context.user_data['cities_game'] = cities.cities_of_Russia
+        return context.user_data['cities_game']
+
+# Проверяет, есть ли уже у пользователя проверочная буква
+def get_check_letter(update, context):
+    if 'check_letter' in context.user_data:
+        return context.user_data['check_letter']
+    else:
+        context.user_data['check_letter'] = update.message.text.strip().split()[-1][0]
+        return context.user_data['check_letter']
+
 
 # Send user information about constellation of planet
 # Отправляют пользователю информацию о том, в каком созвездии сейчас находится планета
