@@ -50,6 +50,7 @@ def help(update, context):
     update.message.reply_text('Напиши /planet *название_планеты_на_английском* и я расскажу тебе, в каком она сейчас созвездии.\
     \n\nНапиши /wordcount *свой_текст* и я посчитаю количество слов в твоем тексте.\
     \n\nНапиши /next_full_moon *дата в формате год-месяц-день* и я скажу, когда следующее полнолуние от твоей даты. Если не указывать дату, то скажу когда будет ближайшее.\
+    \n\nНапиши /cities *Название города* чтобы начать играть в "Города". Отвечать каждый раз нужно, начиная с команды /cities, например /cities Москва\
     \n\nЕще я умею повторять за тобой сообщения.\nПопробуй написать мне любой текст (кроме команд)', reply_markup=get_keyboard())
 
 # Echo
@@ -79,51 +80,56 @@ def wordcount(update, context):
 # Start game "citites" (work in progress)
 # Начинает игру "Города" (в процессе)
 def cities_game(update, context):
-    city_list = get_cities_game(update, context)
-    user_text = update.message.text.strip().split()[-1]
-    check_letter = get_check_letter(update, context)
-    if check_letter == update.message.text.strip().split()[-1][0]:
+    if update.message.text.strip().split()[-1] == 'Заново':
+        context.user_data.pop('cities_game')
+        context.user_data.pop('check_letter')
+        update.message.reply_text('Начинаем игру заново!')
+    else:
+        city_list = get_cities_game(update, context)
+        user_text = update.message.text.strip().split()[-1]
         if user_text in city_list:
-            ln = (-1) * len(user_text) - 1  # Начинаем проверку, есть ли в списке города, которые начинаются на нужную букву
-            check = False                   # Если их нет, то меняем букву на предпоследнюю и т.д.
-            for i in range(-1, ln, -1):
-                for a in range(len(city_list)):
-                    if city_list[a][0] == user_text[i].upper() and a != city_list.index(user_text):
-                        rq_letter = i
-                        check = True
+            check_letter = get_check_letter(update, context)
+            if check_letter == update.message.text.strip().split()[-1][0]:
+                ln = (-1) * len(user_text) - 1  # Начинаем проверку, есть ли в списке города, которые начинаются на нужную букву
+                check = False                   # Если их нет, то меняем букву на предпоследнюю и т.д.
+                for i in range(-1, ln, -1):
+                    for a in range(len(city_list)):
+                        if city_list[a][0] == user_text[i].upper() and a != city_list.index(user_text):
+                            rq_letter = i
+                            check = True
+                            break
+                    if check:
                         break
-                if check:
-                    break
-            resq_letter = user_text[rq_letter].upper()
-            for i in range(len(city_list)):
-                if city_list[i][0] == resq_letter:
-                    answer = i
-                    break
-            ln = (-1) * len(city_list[answer]) - 1  # Начинаем проверку, остались ли в списке города, которые подойдут для ответа пользователя
-            check = False                           # Если их нет, то меняем букву на предпоследнюю и т.д.
-            for i in range(-1, ln, -1):
-                for a in range(len(city_list)):
-                    if city_list[a][0] == city_list[answer][i].upper() and a != answer:
-                        asw_letter = i
-                        check = True
+                resq_letter = user_text[rq_letter].upper()
+                for i in range(len(city_list)):
+                    if city_list[i][0] == resq_letter:
+                        answer = i
                         break
-                if check:
-                    break
-            update.message.reply_text(city_list[answer] + ', тебе на "' + city_list[answer][asw_letter].upper() + '"')
-            context.user_data['check_letter'] = city_list[answer][asw_letter].upper()
-            city_list.remove(user_text)
-            city_list.remove(city_list[answer])
+                ln = (-1) * len(city_list[answer]) - 1  # Начинаем проверку, остались ли в списке города, которые подойдут для ответа пользователя
+                check = False                           # Если их нет, то меняем букву на предпоследнюю и т.д.
+                for i in range(-1, ln, -1):
+                    for a in range(len(city_list)):
+                        if city_list[a][0] == city_list[answer][i].upper() and a != answer:
+                            asw_letter = i
+                            check = True
+                            break
+                    if check:
+                        break
+                update.message.reply_text(city_list[answer] + ', тебе на "' + city_list[answer][asw_letter].upper() + '"')
+                context.user_data['check_letter'] = city_list[answer][asw_letter].upper()
+                city_list.remove(user_text)
+                city_list.remove(city_list[answer])
+            else:
+                update.message.reply_text('Вы написали город, который начинается не на ту букву')
         else:
             update.message.reply_text('Такого города не существует или он уже был')
-    else:
-        update.message.reply_text('Вы написали город, который начинается не на ту букву')
 
 # Проверяет есть ли уже у пользователя список городов для игры в города
 def get_cities_game(update, context):
     if 'cities_game' in context.user_data:
         return context.user_data['cities_game']
     else:
-        context.user_data['cities_game'] = cities.cities_of_Russia
+        context.user_data['cities_game'] = cities.cities_of_Russia[:]
         return context.user_data['cities_game']
 
 # Проверяет, есть ли уже у пользователя проверочная буква
@@ -133,7 +139,6 @@ def get_check_letter(update, context):
     else:
         context.user_data['check_letter'] = update.message.text.strip().split()[-1][0]
         return context.user_data['check_letter']
-
 
 # Send user information about constellation of planet
 # Отправляют пользователю информацию о том, в каком созвездии сейчас находится планета
