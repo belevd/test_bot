@@ -77,6 +77,32 @@ def wordcount(update, context):
     except:
         update.message.reply_text('Что-то пошло не так. Повторите попытку')
 
+# Its a simple calculator 
+# Простой калькулятор с основными операциями с 2 числами
+def calculator(update, context):
+    try:
+        user_text = update.message.text.strip().split()[1:][0]
+        if '+' in user_text:
+            numbers = user_text.split('+')
+            answer = float(numbers[0]) + float(numbers[1])
+            update.message.reply_text(answer)
+        elif '-' in user_text:
+            numbers = user_text.split('-')
+            answer = float(numbers[0]) - float(numbers[1])
+            update.message.reply_text(answer)
+        elif '*' in user_text:
+            numbers = user_text.split('*')
+            answer = float(numbers[0]) * float(numbers[1])
+            update.message.reply_text(answer)
+        elif '/' in user_text:
+            numbers = user_text.split('/')
+            answer = float(numbers[0]) / float(numbers[1])
+            update.message.reply_text('{:.2f}'.format(answer))
+        else:
+            update.message.reply_text('Введен неверный знак операции')    
+    except:
+        update.message.reply_text('Введены неверные данные')
+
 # Start game "citites" (work in progress)
 # Начинает игру "Города" (в процессе)
 def cities_game(update, context):
@@ -200,6 +226,7 @@ def main():
     dp.add_handler(CommandHandler('next_full_moon', next_full_moon))
     dp.add_handler(CommandHandler('cities', cities_game))
     dp.add_handler(CommandHandler('cat', send_cat_picture))
+    dp.add_handler(CommandHandler('calc', calculator))
     dp.add_handler(MessageHandler(Filters.regex('^(ПРИСЛАТЬ КОТИКА!)$'), send_cat_picture))
     dp.add_handler(MessageHandler(Filters.regex('^(Сменить смайлик)$'), change_emo))
     dp.add_handler(MessageHandler(Filters.contact, get_contact))
