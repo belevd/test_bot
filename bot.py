@@ -9,7 +9,7 @@ from telegram import ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import ephem
 
-import settings, cities
+import settings, cities, calc
 
 locale.setlocale(locale.LC_ALL, "russian")
 
@@ -81,25 +81,16 @@ def wordcount(update, context):
 # Простой калькулятор с основными операциями с 2 числами
 def calculator(update, context):
     try:
-        user_text = update.message.text.strip().split()[1:][0]
-        if '+' in user_text:
-            numbers = user_text.split('+')
-            answer = float(numbers[0]) + float(numbers[1])
+        user_text = update.message.text.split()[1:]
+        text = ''
+        for parts in user_text:
+            text += parts
+        print(text)
+        answer = calc.calculator(text)
+        if type(answer) is str:
             update.message.reply_text(answer)
-        elif '-' in user_text:
-            numbers = user_text.split('-')
-            answer = float(numbers[0]) - float(numbers[1])
-            update.message.reply_text(answer)
-        elif '*' in user_text:
-            numbers = user_text.split('*')
-            answer = float(numbers[0]) * float(numbers[1])
-            update.message.reply_text(answer)
-        elif '/' in user_text:
-            numbers = user_text.split('/')
-            answer = float(numbers[0]) / float(numbers[1])
+        elif type(answer) is float:
             update.message.reply_text('{:.2f}'.format(answer))
-        else:
-            update.message.reply_text('Введен неверный знак операции')    
     except:
         update.message.reply_text('Введены неверные данные')
 
